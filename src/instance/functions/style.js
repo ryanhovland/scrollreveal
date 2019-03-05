@@ -27,7 +27,9 @@ export default function style(element) {
 
 	inline.generated = inlineMatch.some(m => m.match(/visibility\s?:\s?visible/i))
 		? inline.computed
-		: [...inlineMatch, 'visibility: visible'].map(m => m.trim()).join('; ') + ';'
+		: [...inlineMatch, 'visibility: visible !important']
+			.map(m => m.trim())
+			.join('; ') + ';'
 
 	/**
 	 * Generate opacity styles
