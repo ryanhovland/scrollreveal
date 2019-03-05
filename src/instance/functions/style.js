@@ -139,9 +139,7 @@ export default function style(element) {
 
 		transform.generated = {
 			initial: `${transform.property}: matrix3d(${product.join(', ')});`,
-			final: `${transform.property}: matrix3d(${transform.computed.matrix.join(
-				', '
-			)});`
+			final: `${transform.property}: matrix3d(${transform.computed.matrix.join(', ')});`
 		}
 	} else {
 		transform.generated = {
