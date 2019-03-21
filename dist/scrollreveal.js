@@ -1354,7 +1354,7 @@ function isElementVisible(element) {
 	if ( element === void 0 ) element = {};
 
 	var container = this.store.containers[element.containerId];
-	if (!container) { return }
+	if (!container || !element.geometry) { return }
 
 	var viewFactor = Math.max(0, Math.min(1, element.config.viewFactor));
 	var viewOffset = element.config.viewOffset;
